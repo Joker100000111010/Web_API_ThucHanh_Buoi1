@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LapTrinhWebAPIBuoi1.props" />
+</Project>

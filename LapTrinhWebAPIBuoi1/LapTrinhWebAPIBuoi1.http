@@ -1,0 +1,6 @@
+@LapTrinhWebAPIBuoi1_HostAddress = http://localhost:5150
+
+GET {{LapTrinhWebAPIBuoi1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
