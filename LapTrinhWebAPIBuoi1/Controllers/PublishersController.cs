@@ -1,130 +1,59 @@
-﻿using LapTrinhWebAPIBuoi1.Models.Domain;
-using LapTrinhWebAPIBuoi1.Services;
+﻿using LapTrinhWebAPIBuoi1.Data;
+using LapTrinhWebAPIBuoi1.Models.Domain;
+using LapTrinhWebAPIBuoi1.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using static LapTrinhWebAPIBuoi1.Models.DTO.PublishersDTO;
+using System.Security.Policy;
+using LapTrinhWebAPIBuoi1.Models.DTO;
 
 namespace LapTrinhWebAPIBuoi1.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
+
     public class PublishersController : ControllerBase
     {
-        private readonly IBookstoreServices _BookService;
-        private readonly ILogger<PublishersController> _logger; // Inject ILogger
-
-        public PublishersController(IBookstoreServices BookService, ILogger<PublishersController> logger)
+        private readonly AppDbContext _dbContext;
+        private readonly IPublisherRepository _publisherRepository;
+        public PublishersController(AppDbContext dbContext, IPublisherRepository
+publisherRepository)
         {
-            _BookService = BookService;
-            _logger = logger; // Inject ILogger
+            _dbContext = dbContext;
+            _publisherRepository = publisherRepository;
         }
-        [HttpGet]
-        public async Task<IActionResult> getAllStudent()
+        [HttpGet("get-all-publisher")]
+        public IActionResult GetAllPublisher()
         {
-            try
-            {
-                var Publishers = await _BookService.GetAllPublishers(); 
-                _logger.LogInformation($"Retrieved {Publishers.Count} Publishers from the database.");
-                return StatusCode(StatusCodes.Status200OK, Publishers);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while retrieving Publishers: {ex.Message}"); // Ghi log
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving Publishers.");
-            }
+            var allPublishers = _publisherRepository.GetAllPublishers();
+            return Ok(allPublishers);
         }
-
-        [HttpGet("id")]
-        public async Task<IActionResult> GetIdPublishers(int id, bool includePublishers = false)
+        [HttpGet("get-publisher-by-id")]
+        public IActionResult GetPublisherById(int id)
         {
-            try
-            {
-                Publishers publishers = await _BookService.GetIdPublishers(id, includePublishers);
-                _logger.LogInformation($"Retrieved Name: {publishers.Name} Publishers from the database.");
-                if (publishers == null)
-                {
-                   return StatusCode(StatusCodes.Status204NoContent, $"No Author found for id: {id}");
-                }
-                return StatusCode(StatusCodes.Status200OK, publishers);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while retrieving Publishers with ID {id}: {ex.Message}"); // Ghi log
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving student.");
-            }
+            var publisherWithId = _publisherRepository.GetPublisherById(id);
+            return Ok(publisherWithId);
         }
-
-
-        [HttpPost]
-        public async Task<ActionResult<Publishers>> AddPublishers(Publishers publishers)
+        [HttpPost("add-publisher")]
+        public IActionResult AddPublisher([FromBody] AddPublishers
+       addPublisherRequestDTO)
         {
-            try
-            {
-                var dbpublishers = await _BookService.AddPublishers(publishers);
-                if (dbpublishers == null)
-                {
-                    _logger.LogError($"{publishers.Name} could not be added.");
-                    return StatusCode(StatusCodes.Status500InternalServerError, $"{publishers.Name} could not be added.");
-                }
-
-                _logger.LogInformation($"{publishers.Name} added successfully.");
-                return CreatedAtAction("GetStudents", new { id = publishers.PublishersId }, publishers);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while adding student: {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while adding student.");
-            }
+            var publisherAdd = _publisherRepository.AddPublisher(addPublisherRequestDTO);
+            return Ok(publisherAdd);
         }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePublishers(int id, Publishers publishers)
+        [HttpPut("update-publisher-by-id/{id}")]
+        public IActionResult UpdatePublisherById(int id, [FromBody] PublisherNoIdDTO
+       publisherDTO)
         {
-            try
-            {
-                if (id != publishers.PublishersId)
-                {
-                    return BadRequest();
-                }
+            var publisherUpdate = _publisherRepository.UpdatePublisherById(id,
+           publisherDTO);
 
-                Publishers dbpublishers = await _BookService.UpdatePublishers(publishers);
-
-                if (dbpublishers == null)
-                {
-                    _logger.LogError($"{publishers.Name} could not be updated.");
-                    return StatusCode(StatusCodes.Status500InternalServerError, $"{publishers.Name} could not be updated.");
-                }
-
-                _logger.LogInformation($"{publishers.Name} updated successfully.");
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while updating student: {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating student.");
-            }
+            return Ok(publisherUpdate);
         }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePublishers(int id)
+        [HttpDelete("delete-publisher-by-id/{id}")]
+        public IActionResult DeletePublisherById(int id)
         {
-            try
-            {
-                var publishers = await _BookService.GetIdPublishers(id, false);
-                (bool status, string message) = await _BookService.DeletePublishers(publishers);
-
-                if (status == false)
-                {
-                    _logger.LogError($"Error deleting student: {message}");
-                    return StatusCode(StatusCodes.Status500InternalServerError, message);
-                }
-
-                _logger.LogInformation($"Student with ID {id} deleted successfully.");
-                return StatusCode(StatusCodes.Status200OK, publishers);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred while deleting student with ID {id}: {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting student.");
-            }
+            var publisherDelete = _publisherRepository.DeletePublisherById(id);
+            return Ok();
         }
     }
 }

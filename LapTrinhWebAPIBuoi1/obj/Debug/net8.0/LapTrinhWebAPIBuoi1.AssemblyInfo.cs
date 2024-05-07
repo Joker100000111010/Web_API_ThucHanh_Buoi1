@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LapTrinhWebAPIBuoi1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fffa43ab063ee70ef873cd535cfe0bd4c7b1f04a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LapTrinhWebAPIBuoi1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LapTrinhWebAPIBuoi1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

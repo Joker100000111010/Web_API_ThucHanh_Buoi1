@@ -250,3 +250,4 @@ C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web b
 C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\obj\Debug\net8.0\LapTrinhWebAPIBuoi1.sourcelink.json
