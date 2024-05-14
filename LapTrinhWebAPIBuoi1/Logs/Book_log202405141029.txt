@@ -1,0 +1,24 @@
+2024-05-14 10:29:41.026 +07:00 [INF] User profile is available. Using 'C:\Users\LongTran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-14 10:29:41.745 +07:00 [INF] Now listening on: https://localhost:7144
+2024-05-14 10:29:41.748 +07:00 [INF] Now listening on: http://localhost:5150
+2024-05-14 10:29:41.755 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-14 10:29:41.756 +07:00 [INF] Hosting environment: Development
+2024-05-14 10:29:41.758 +07:00 [INF] Content root path: C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1
+2024-05-14 10:29:46.125 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2024-05-14 10:29:46.466 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 350.4533ms
+2024-05-14 10:29:46.472 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-14 10:29:46.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.2226ms
+2024-05-14 10:29:46.493 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-14 10:29:46.561 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.4261ms
+2024-05-14 10:29:46.669 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2024-05-14 10:29:46.860 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.9208ms
+2024-05-14 10:29:56.789 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Authors/get-all-author - null null
+2024-05-14 10:29:56.821 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.AuthorsController.GetAllAuthor (LapTrinhWebAPIBuoi1)'
+2024-05-14 10:29:56.860 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller LapTrinhWebAPIBuoi1.Controllers.AuthorsController (LapTrinhWebAPIBuoi1).
+2024-05-14 10:29:58.892 +07:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AuthorsId], [a].[FullName]
+FROM [Authors] AS [a]
+2024-05-14 10:29:58.959 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LapTrinhWebAPIBuoi1.Models.DTO.AuthorDTO, LapTrinhWebAPIBuoi1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-14 10:29:58.973 +07:00 [INF] Executed action LapTrinhWebAPIBuoi1.Controllers.AuthorsController.GetAllAuthor (LapTrinhWebAPIBuoi1) in 2104.585ms
+2024-05-14 10:29:58.976 +07:00 [INF] Executed endpoint 'LapTrinhWebAPIBuoi1.Controllers.AuthorsController.GetAllAuthor (LapTrinhWebAPIBuoi1)'
+2024-05-14 10:29:58.989 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Authors/get-all-author - 200 null application/json; charset=utf-8 2200.3613ms

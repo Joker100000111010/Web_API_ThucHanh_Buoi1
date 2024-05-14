@@ -14,24 +14,47 @@ namespace LapTrinhWebAPIBuoi1.Repositories
         {
             _dbContext = dpContext;
         }
-        public List<BookWithAuthorAndPublisherDTO> GetAllBooks()
+        public List<BookWithAuthorAndPublisherDTO> GetAllBooks(string? filterOn = null, string?
+        filterQuery = null,
+         string? sortBy = null, bool isAscending = true, int pageNumber = 1, int
+        pageSize = 1000)
         {
-            var allBooksDTO = _dbContext.Books.Select(book => new BookWithAuthorAndPublisherDTO
+            var allBooks = _dbContext.Books.Select(book => new
+           BookWithAuthorAndPublisherDTO()
+            {
+                Id = book.BooksId,
+                Title = book.Title,
+                Description = book.Description,
+                IsRead = book.IsRead,
+                DateRead = book.IsRead && book.DateRead != null ? book.DateRead : null,
+                Rate = book.IsRead ? book.Rate : null,
+                Genre = book.Genre,
+                CoverUrl = book.CoverUrl,
+                PublisherName = book.Publishers.Name,
+                AuthorName = book.Book_Authors.Select(n => n.Authors.FullName).ToList(),
+            }).AsQueryable();
+            //filtering
+            if (string.IsNullOrWhiteSpace(filterOn) == false &&
+           string.IsNullOrWhiteSpace(filterQuery) == false)
+            {
+                if (filterOn.Equals("title", StringComparison.OrdinalIgnoreCase))
                 {
-                    Id = book.BooksId,
-                    Title = book.Title,
-                    Description = book.Description,
-                    IsRead = book.IsRead,
-                    DateRead = book.IsRead && book.DateRead != null ? book.DateRead : null,
-                    Rate = book.IsRead ? book.Rate : null,
-                    Genre = book.Genre,
-                    CoverUrl = book.CoverUrl,
-                    PublisherName = book.Publishers.Name,
-                    AuthorName = book.Book_Authors.Select(n => n.Authors.FullName).ToList(),
-                }).ToList();
-            return allBooksDTO;
+                    allBooks = allBooks.Where(x => x.Title.Contains(filterQuery));
+                }
+            }
+            //sorting
+            if (string.IsNullOrWhiteSpace(sortBy) == false)
+            {
+                if (sortBy.Equals("title", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = isAscending ? allBooks.OrderBy(x => x.Title) :
+                   allBooks.OrderByDescending(x => x.Title);
+                }
+            }
+            //pagination
+            var skipResults = (pageNumber - 1) * pageSize;
+            return allBooks.Skip(skipResults).Take(pageSize).ToList();
         }
-
         public BookWithAuthorAndPublisherDTO GetBookById(int id)
         {
             var bookWithDomain = _dbContext.Books.Where(n => n.BooksId == id);
