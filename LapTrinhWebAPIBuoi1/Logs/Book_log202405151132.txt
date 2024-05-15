@@ -1,0 +1,16 @@
+2024-05-15 11:32:31.089 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7144/api/User/Login - application/json 63
+2024-05-15 11:32:31.110 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.UserController.Login (LapTrinhWebAPIBuoi1)'
+2024-05-15 11:32:31.154 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LapTrinhWebAPIBuoi1.Models.DTO.LoginRequestDTO) on controller LapTrinhWebAPIBuoi1.Controllers.UserController (LapTrinhWebAPIBuoi1).
+2024-05-15 11:32:33.430 +07:00 [INF] Executed DbCommand (87ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-15 11:32:33.713 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-15 11:32:33.755 +07:00 [INF] Executing OkObjectResult, writing value of type 'LapTrinhWebAPIBuoi1.Models.DTO.LoginResponseDTO'.
+2024-05-15 11:32:33.766 +07:00 [INF] Executed action LapTrinhWebAPIBuoi1.Controllers.UserController.Login (LapTrinhWebAPIBuoi1) in 2604.1768ms
+2024-05-15 11:32:33.767 +07:00 [INF] Executed endpoint 'LapTrinhWebAPIBuoi1.Controllers.UserController.Login (LapTrinhWebAPIBuoi1)'
+2024-05-15 11:32:33.777 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7144/api/User/Login - 200 null application/json; charset=utf-8 2687.7913ms

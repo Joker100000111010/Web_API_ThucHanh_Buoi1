@@ -1,6 +1,8 @@
-﻿using LapTrinhWebAPIBuoi1.Models.Domain;
+﻿using LapTrinhWebAPIBuoi1.Models;
+using LapTrinhWebAPIBuoi1.Models.Domain;
 using LapTrinhWebAPIBuoi1.Models.DTO;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using System.Reflection.Emit;
 
 namespace LapTrinhWebAPIBuoi1.Data
@@ -12,10 +14,13 @@ namespace LapTrinhWebAPIBuoi1.Data
         public DbSet<Books> Books { get; set; }
         public DbSet<Authors> Authors { get; set; }
         public DbSet<Book_Author> Books_Author { get; set;}
-        
-
+        public DbSet<CustomImage> Images { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
+            // Configuration for Image entity
+            builder.Entity<CustomImage>().Ignore(e=>e.File);
             builder.Entity<Book_Author>()
                 .HasKey(bc => new { bc.BooksId, bc.AuthorsId });
 

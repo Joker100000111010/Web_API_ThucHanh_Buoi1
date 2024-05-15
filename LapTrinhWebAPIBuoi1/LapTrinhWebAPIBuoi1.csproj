@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Logs\" />
+    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>

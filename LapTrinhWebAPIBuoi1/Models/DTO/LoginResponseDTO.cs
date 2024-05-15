@@ -1,9 +1,10 @@
-﻿namespace LapTrinhWebAPIBuoi1.Models.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LapTrinhWebAPIBuoi1.Models.DTO
 {
     public class LoginResponseDTO
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
         public string JwtToken { set; get; }
     }
+
 }

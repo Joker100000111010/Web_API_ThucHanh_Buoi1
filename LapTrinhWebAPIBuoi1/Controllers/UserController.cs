@@ -48,14 +48,13 @@ namespace LapTrinhWebAPIBuoi1.Controllers
           //POST: /api/Auth/Login -chức năng đăng nhập User 
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginResponseDTO loginRequestDTO)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginRequestDTO)
         // khai báo model cho Login 
         {
             var user = await _userManager.FindByEmailAsync(loginRequestDTO.Username);
             if (user != null)
             {
-                var checkPasswordResult = await
-               _userManager.CheckPasswordAsync(user, loginRequestDTO.Password);// kiểm tra password nhập vào khớp với password lưu ở database
+                var checkPasswordResult = await _userManager.CheckPasswordAsync(user, loginRequestDTO.Password);// kiểm tra password nhập vào khớp với password lưu ở database
             if (checkPasswordResult)
                 {
                     //get roles for this user – lấy quyền của user từ database

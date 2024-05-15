@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "i/Yfl4920DWHN3w/27l3LosYxwINEHItTPrkHll6xjG1B3dLXkpt+wE4WiHlJLbSepe+tkF6bA42MN/9AsHp2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LongTran\\Desktop\\Visual Studio 2022\\lập trình web\\Lập trình web bằng API\\LapTrinhWebAPIBuoi1\\APS_Web_API\\APS_Web_API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LongTran\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.0\\microsoft.aspnetcore.jsonpatch.8.0.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.aspnetcore.middlewareanalysis\\8.0.0\\microsoft.aspnetcore.middlewareanalysis.8.0.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\microsoft.extensions.diagnosticadapter\\3.1.32\\microsoft.extensions.diagnosticadapter.3.1.32.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\ocelot\\23.2.2\\ocelot.23.2.2.nupkg.sha512",
+    "C:\\Users\\LongTran\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

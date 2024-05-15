@@ -1,0 +1,24 @@
+2024-05-15 11:46:00.914 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Images - null null
+2024-05-15 11:46:00.931 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.ImagesController.GetAllInfoImages (LapTrinhWebAPIBuoi1)'
+2024-05-15 11:46:00.952 +07:00 [INF] Route matched with {action = "GetAllInfoImages", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllInfoImages() on controller LapTrinhWebAPIBuoi1.Controllers.ImagesController (LapTrinhWebAPIBuoi1).
+2024-05-15 11:46:00.965 +07:00 [INF] Executed action LapTrinhWebAPIBuoi1.Controllers.ImagesController.GetAllInfoImages (LapTrinhWebAPIBuoi1) in 3.3876ms
+2024-05-15 11:46:00.968 +07:00 [INF] Executed endpoint 'LapTrinhWebAPIBuoi1.Controllers.ImagesController.GetAllInfoImages (LapTrinhWebAPIBuoi1)'
+2024-05-15 11:46:00.975 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'LapTrinhWebAPIBuoi1.Repositories.IImageRepository' while attempting to activate 'LapTrinhWebAPIBuoi1.Controllers.ImagesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-15 11:46:01.045 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Images - 500 null text/plain; charset=utf-8 131.0065ms

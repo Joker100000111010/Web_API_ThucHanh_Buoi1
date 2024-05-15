@@ -1,0 +1,32 @@
+2024-05-15 11:45:00.118 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-all-books?filterOn=long&filterQuery=1&sortBy=2&isAscending=true&pageNumber=1&pageSize=100 - null null
+2024-05-15 11:45:00.145 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2024-05-15 11:45:00.148 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:00.150 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-all-books?filterOn=long&filterQuery=1&sortBy=2&isAscending=true&pageNumber=1&pageSize=100 - 401 0 null 35.0163ms
+2024-05-15 11:45:10.295 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-all-books?filterOn=long&filterQuery=lol&sortBy=lollll&isAscending=true&pageNumber=1&pageSize=100 - null null
+2024-05-15 11:45:10.303 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2024-05-15 11:45:10.305 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:10.306 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-all-books?filterOn=long&filterQuery=lol&sortBy=lollll&isAscending=true&pageNumber=1&pageSize=100 - 401 0 null 10.9253ms
+2024-05-15 11:45:20.905 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/1 - null null
+2024-05-15 11:45:20.908 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-15 11:45:20.910 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:20.912 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/1 - 401 0 null 6.9076ms
+2024-05-15 11:45:24.718 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/2 - null null
+2024-05-15 11:45:24.721 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-15 11:45:24.722 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:24.724 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/2 - 401 0 null 5.5942ms
+2024-05-15 11:45:30.723 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/4 - null null
+2024-05-15 11:45:30.725 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-15 11:45:30.728 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:30.730 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/4 - 401 0 null 7.2887ms
+2024-05-15 11:45:33.152 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/3 - null null
+2024-05-15 11:45:33.154 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-15 11:45:33.155 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 11:45:33.157 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-book-by-id/3 - 401 0 null 4.4935ms
