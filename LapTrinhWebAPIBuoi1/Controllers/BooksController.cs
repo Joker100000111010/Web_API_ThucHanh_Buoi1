@@ -16,7 +16,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+   // [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly AppDbContext _dbContext;
@@ -32,7 +32,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
 
 
         [HttpGet("get-all-books")] // Thêm attribute này
-        [Authorize(Roles = "Read")]
+       // [Authorize(Roles = "Read")]
         public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
                                     [FromQuery] string? sortBy, [FromQuery] bool isAscending,
                                     [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
@@ -56,7 +56,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
 
         [HttpPost("and-book")]
         [ValidateModel]
-        [Authorize(Roles = "Write")]
+        //[Authorize(Roles = "Write")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
             if (ModelState.IsValid)
@@ -74,7 +74,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
         }
 
         [HttpPut("update-book-by-id/{id}")]
-        [Authorize(Roles ="Read,Write")]
+        //[Authorize(Roles ="Read,Write")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
         {
             var updateBook = _bookRepository.UpdateBookById(id, bookDTO);
@@ -82,7 +82,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
         }
 
         [HttpDelete("delete-book-by-id/{id}")]
-        [Authorize(Roles = "Read,Write")]
+        //[Authorize(Roles = "Read,Write")]
         public IActionResult DeleteBookById(int id)
         {
             var deleteBook = _bookRepository.DeleteBookById(id);

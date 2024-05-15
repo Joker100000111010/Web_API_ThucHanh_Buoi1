@@ -1,0 +1,8 @@
+2024-05-15 21:00:08.385 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2024-05-15 21:00:08.398 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 13.2754ms
+2024-05-15 21:00:08.411 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 21:00:08.411 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-15 21:00:08.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 3.9668ms
+2024-05-15 21:00:08.428 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.3153ms
+2024-05-15 21:00:08.502 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2024-05-15 21:00:08.518 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.1553ms

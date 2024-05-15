@@ -20,7 +20,7 @@ namespace MVC_API_Buoi1.Controllers
             {
                 // lấy dữ liệu books from API
                 var client = httpClientFactory.CreateClient();
-                var httpResponseMess = await client.GetAsync("https://localhost:7245/api/Books/get-all-books? filterOn=" + filteron + "&filterQuery=" + filterQuery + "&sortBy=" + sortBy + "&isAscending=" + isAscending);
+                var httpResponseMess = await client.GetAsync("https://localhost:7144/api/Books/get-all-books? filterOn=" + filteron + "&filterQuery=" + filterQuery + "&sortBy=" + sortBy + "&isAscending=" + isAscending);
                 httpResponseMess.EnsureSuccessStatusCode();
                 response.AddRange(await httpResponseMess.Content.ReadFromJsonAsync<IEnumerable<BookDTO>>());
             }
@@ -80,17 +80,17 @@ namespace MVC_API_Buoi1.Controllers
         {
             BookDTO responseBook = new BookDTO();
             var client = httpClientFactory.CreateClient();
-            var httpResponseMess = await client.GetAsync("https://localhost:7245/api/Books/get-book-by-id/" + id);
+            var httpResponseMess = await client.GetAsync("https://localhost:7144/api/Books/get-book-by-id/" + id);
             httpResponseMess.EnsureSuccessStatusCode();
             responseBook = await httpResponseMess.Content.ReadFromJsonAsync<BookDTO>();
             ViewBag.Book = responseBook;
             List<authorDTO> responseAu = new List<authorDTO>();
-            var httpResponseAu = await client.GetAsync("https://localhost:7245/api/Authors/get-all-author");
+            var httpResponseAu = await client.GetAsync("https://localhost:7144/api/Authors/get-all-author");
             httpResponseAu.EnsureSuccessStatusCode();
             responseAu.AddRange(await httpResponseAu.Content.ReadFromJsonAsync<IEnumerable<authorDTO>>());
             ViewBag.listAuthor = responseAu;
             List<publisherDTO> responsePu = new List<publisherDTO>();
-            var httpResponsePu = await client.GetAsync("https://localhost:7245/api/Publisher/get-all-publisher");
+            var httpResponsePu = await client.GetAsync("https://localhost:7144/api/Publisher/get-all-publisher");
             httpResponsePu.EnsureSuccessStatusCode();
             responsePu.AddRange(await httpResponsePu.Content.ReadFromJsonAsync<IEnumerable<publisherDTO>>());
             ViewBag.listPublisher = responsePu;
@@ -105,7 +105,7 @@ namespace MVC_API_Buoi1.Controllers
                 var httpRequestMess = new HttpRequestMessage()
                 {
                 Method = HttpMethod.Put,
-                RequestUri = new Uri("https://localhost:7245/api/Books/update-book-by-id/"+id), 
+                RequestUri = new Uri("https://localhost:7144/api/Books/update-book-by-id/"+id), 
                 Content = new StringContent(JsonSerializer.Serialize(bookDTO), Encoding.UTF8,MediaTypeNames.Application.Json)
                 };
                 var httpResponseMess = await client.SendAsync(httpRequestMess);

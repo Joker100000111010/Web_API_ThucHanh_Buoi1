@@ -1,0 +1,6 @@
+2024-05-15 21:18:50.925 +07:00 [INF] User profile is available. Using 'C:\Users\LongTran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 21:18:51.088 +07:00 [INF] Now listening on: https://localhost:7144
+2024-05-15 21:18:51.090 +07:00 [INF] Now listening on: http://localhost:5150
+2024-05-15 21:18:51.093 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 21:18:51.094 +07:00 [INF] Hosting environment: Development
+2024-05-15 21:18:51.094 +07:00 [INF] Content root path: C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1
