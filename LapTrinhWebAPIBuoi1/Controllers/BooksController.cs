@@ -54,7 +54,7 @@ namespace LapTrinhWebAPIBuoi1.Controllers
             return Ok(bookWithIdDTO);
         }
 
-        [HttpPost("and-book")]
+        [HttpPost("add-book")]
         [ValidateModel]
         //[Authorize(Roles = "Write")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)

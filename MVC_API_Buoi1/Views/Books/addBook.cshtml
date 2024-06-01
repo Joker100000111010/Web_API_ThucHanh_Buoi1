@@ -1,31 +1,22 @@
-﻿@model MVC_API_Buoi1.Models.DTO.addBookDTO
+﻿@model MVC_API_Buoi1.Models.DTO.addBookDTO;
 @{
-    var ListAuthor = ViewBag.listAuthor;
-    var ListPublisher = ViewBag.listPublisher;
+    ViewData["Title"] = "Home Page";
 }
 
-<form asp-controller="Books" asp-action="addBook" method="POST">
-<label>Title</label>
+<form asp-controller="Books" asp-action="addBook" method="POST" id="addBookForm" onsubmit="submitForm()">
+    <label>Title</label>
     <input type="text" name="title" asp-for="Title" /><span asp-validation-for="Title" class="text-danger"></span><br />
-<label>Description</label>
-<input type="text" name="description" asp-for="description" /><br />
+    <label>Description</label>
+    <input type="text" name="Description" asp-for="description" /><br />
     <label>IsRead</label><input type="radio" name="isRead" asp-for="IsRead" value="True" /> Yes <input type="radio" name="isRead" asp-For="IsRead" value="False" /> No<br />
-<label>DateRead</label><input type="date" name="dateRead" asp-for="dateRead" /><br />
-<label>Rate</label><input type="number" name="rate" asp-for="rate" /><br />
-<label>Genre</label><input type="text" name="genre" asp-for="genre" /><br />
-<label>Cover Url</label><input type="text" name="coverUrl" asp-for="coverUrl" /><br />
-<label>DateAdded:</label><input type="date" name="dateAdded" asp-for="dateAdded" /><br />
-<label>Publisher: </label>
-<select name="publisherID">
-@foreach (var item in ListPublisher){
-        <option value="@item.Id">@item.Name</option>
-}
-</select>
-<label>Author:</label> 
-<select name="authorIds" multiple> 
-    @foreach (var item in ListAuthor){
-            <option value="@item.Id">@item.FullName</option>
-        }
-</select>
-<input type="submit" />
+    <label>DateRead</label><input type="date" name="DateRead" asp-for="dateAdded" /><br />
+    <label>Rate</label><input type="number" name="Rate" asp-for="rate" /><br />
+    <label>Genre</label><input type="text" name="Genre" asp-for="genre" /><br />
+    <label>Cover Url</label><input type="text" name="Url" asp-for="coverUrl" /><br />
+    <label>DateAdded:</label><input type="date" name="DateAdd" asp-for="dateAdded" /><br />
+    <label>Publisher: </label>
+    <input type="number" asp-for="publisherID" />
+    <label>Author:</label>
+    <input type="number" asp-for="authorIds" />
+    <input class="btn btn-primary" type="submit" value="Create" />
 </form>

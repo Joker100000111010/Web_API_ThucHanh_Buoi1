@@ -1,0 +1,72 @@
+2024-05-16 08:41:25.016 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2024-05-16 08:41:25.031 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 14.3762ms
+2024-05-16 08:41:25.045 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-16 08:41:25.045 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-16 08:41:25.051 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.325ms
+2024-05-16 08:41:25.057 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.4046ms
+2024-05-16 08:41:25.204 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2024-05-16 08:41:25.228 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.365ms
+2024-05-16 08:41:30.539 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/api/Books/get-all-books?pageNumber=1&pageSize=100 - null null
+2024-05-16 08:41:30.542 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1)'
+2024-05-16 08:41:30.544 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller LapTrinhWebAPIBuoi1.Controllers.BooksController (LapTrinhWebAPIBuoi1).
+2024-05-16 08:41:30.547 +07:00 [INF] GetAll Book Action method was invoked
+2024-05-16 08:41:30.548 +07:00 [WRN] This is a warning log
+2024-05-16 08:41:30.552 +07:00 [ERR] This is a error log
+2024-05-16 08:41:30.563 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[BooksId], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) AND [t].[DateRead] IS NOT NULL THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[PublishersId], [t0].[FullName], [t0].[BooksId], [t0].[AuthorsId], [t0].[AuthorsId0]
+FROM (
+    SELECT [b].[BooksId], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublishersId], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublishersId] = [p].[PublishersId]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[BooksId], [b0].[AuthorsId], [a].[AuthorsId] AS [AuthorsId0]
+    FROM [Books_Author] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorsId] = [a].[AuthorsId]
+) AS [t0] ON [t].[BooksId] = [t0].[BooksId]
+ORDER BY [t].[BooksId], [p].[PublishersId], [t0].[BooksId], [t0].[AuthorsId]
+2024-05-16 08:41:30.569 +07:00 [INF] Finished GetAllBook request with data [{"Id":1,"Title":"Book1","Description":"Doraemon","IsRead":true,"DateRead":"2024-04-25T03:12:24.458","Rate":0,"Genre":"Nam","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]},{"Id":3,"Title":"Sample Title","Description":"Sample Description","IsRead":true,"DateRead":"2024-04-25T03:11:24.458","Rate":0,"Genre":"Sample Genre","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":[]},{"Id":5,"Title":"Sample Title","Description":"Sample Description","IsRead":true,"DateRead":"2024-04-25T03:11:24.458","Rate":0,"Genre":"Sample Genre","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":[]},{"Id":11,"Title":"Harry Potter and the Philosopher\u0027s Stone","Description":"The first book in the Harry Potter series, written by J.K. Rowling.","IsRead":true,"DateRead":"2001-06-26T00:00:00","Rate":5,"Genre":"Fantasy","CoverUrl":"https://example.com/harry_potter_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12","Tr\u1EA7n Cao Duy\u00EAn "]},{"Id":13,"Title":"Book 4","Description":"Conan","IsRead":true,"DateRead":null,"Rate":4,"Genre":"Nam","CoverUrl":"https://example.com/conan_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]},{"Id":15,"Title":"Th\u00E1m t\u1EED l\u1EEBng danh conan","Description":"Conan","IsRead":true,"DateRead":null,"Rate":4,"Genre":"Nam","CoverUrl":"https://example.com/conan_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]}]
+2024-05-16 08:41:30.574 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LapTrinhWebAPIBuoi1.Models.DTO.BookWithAuthorAndPublisherDTO, LapTrinhWebAPIBuoi1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-16 08:41:30.575 +07:00 [INF] Executed action LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1) in 28.9632ms
+2024-05-16 08:41:30.576 +07:00 [INF] Executed endpoint 'LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1)'
+2024-05-16 08:41:30.576 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/api/Books/get-all-books?pageNumber=1&pageSize=100 - 200 null application/json; charset=utf-8 36.9898ms
+2024-05-16 08:41:47.409 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2024-05-16 08:41:47.414 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1)'
+2024-05-16 08:41:47.418 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller LapTrinhWebAPIBuoi1.Controllers.BooksController (LapTrinhWebAPIBuoi1).
+2024-05-16 08:41:47.419 +07:00 [INF] GetAll Book Action method was invoked
+2024-05-16 08:41:47.419 +07:00 [WRN] This is a warning log
+2024-05-16 08:41:47.420 +07:00 [ERR] This is a error log
+2024-05-16 08:41:47.429 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[BooksId], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) AND [t].[DateRead] IS NOT NULL THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[PublishersId], [t0].[FullName], [t0].[BooksId], [t0].[AuthorsId], [t0].[AuthorsId0]
+FROM (
+    SELECT [b].[BooksId], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublishersId], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublishersId] = [p].[PublishersId]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[BooksId], [b0].[AuthorsId], [a].[AuthorsId] AS [AuthorsId0]
+    FROM [Books_Author] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorsId] = [a].[AuthorsId]
+) AS [t0] ON [t].[BooksId] = [t0].[BooksId]
+ORDER BY [t].[BooksId], [p].[PublishersId], [t0].[BooksId], [t0].[AuthorsId]
+2024-05-16 08:41:47.433 +07:00 [INF] Finished GetAllBook request with data [{"Id":1,"Title":"Book1","Description":"Doraemon","IsRead":true,"DateRead":"2024-04-25T03:12:24.458","Rate":0,"Genre":"Nam","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]},{"Id":3,"Title":"Sample Title","Description":"Sample Description","IsRead":true,"DateRead":"2024-04-25T03:11:24.458","Rate":0,"Genre":"Sample Genre","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":[]},{"Id":5,"Title":"Sample Title","Description":"Sample Description","IsRead":true,"DateRead":"2024-04-25T03:11:24.458","Rate":0,"Genre":"Sample Genre","CoverUrl":"https://example.com/sample-cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":[]},{"Id":11,"Title":"Harry Potter and the Philosopher\u0027s Stone","Description":"The first book in the Harry Potter series, written by J.K. Rowling.","IsRead":true,"DateRead":"2001-06-26T00:00:00","Rate":5,"Genre":"Fantasy","CoverUrl":"https://example.com/harry_potter_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12","Tr\u1EA7n Cao Duy\u00EAn "]},{"Id":13,"Title":"Book 4","Description":"Conan","IsRead":true,"DateRead":null,"Rate":4,"Genre":"Nam","CoverUrl":"https://example.com/conan_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]},{"Id":15,"Title":"Th\u00E1m t\u1EED l\u1EEBng danh conan","Description":"Conan","IsRead":true,"DateRead":null,"Rate":4,"Genre":"Nam","CoverUrl":"https://example.com/conan_cover.jpg","DateAdded":"0001-01-01T00:00:00","PublisherName":"Nh\u00E0 Xu\u1EA5t B\u1EA3n Kim \u0110\u1ED3ng","AuthorName":["Fujiko Fujio12"]}]
+2024-05-16 08:41:47.435 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LapTrinhWebAPIBuoi1.Models.DTO.BookWithAuthorAndPublisherDTO, LapTrinhWebAPIBuoi1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-16 08:41:47.436 +07:00 [INF] Executed action LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1) in 17.4463ms
+2024-05-16 08:41:47.437 +07:00 [INF] Executed endpoint 'LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1)'
+2024-05-16 08:41:47.438 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 29.1232ms

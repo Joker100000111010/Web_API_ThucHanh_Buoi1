@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC_API_Buoi1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdbd101f4da3bc645e5e8e05fcfe5b54980cea2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC_API_Buoi1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC_API_Buoi1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,28 @@
+2024-05-29 20:04:57.215 +07:00 [INF] User profile is available. Using 'C:\Users\LongTran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-29 20:04:57.509 +07:00 [INF] Now listening on: https://localhost:7144
+2024-05-29 20:04:57.521 +07:00 [INF] Now listening on: http://localhost:5150
+2024-05-29 20:04:57.526 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-29 20:04:57.532 +07:00 [INF] Hosting environment: Development
+2024-05-29 20:04:57.534 +07:00 [INF] Content root path: C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1
+2024-05-29 20:04:58.817 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2024-05-29 20:04:59.166 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2024-05-29 20:04:59.180 +07:00 [INF] Executing endpoint 'LapTrinhWebAPIBuoi1.Controllers.BooksController.GetAll (LapTrinhWebAPIBuoi1)'
+2024-05-29 20:04:59.207 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller LapTrinhWebAPIBuoi1.Controllers.BooksController (LapTrinhWebAPIBuoi1).
+2024-05-29 20:04:59.242 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 427.8697ms
+2024-05-29 20:04:59.288 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/swagger-ui.css - null null
+2024-05-29 20:04:59.288 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/swagger-ui-bundle.js - null null
+2024-05-29 20:04:59.321 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/swagger-ui-standalone-preset.js - null null
+2024-05-29 20:04:59.349 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-29 20:04:59.356 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-29 20:04:59.385 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 35.9153ms
+2024-05-29 20:04:59.387 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-05-29 20:04:59.416 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-05-29 20:04:59.452 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-05-29 20:04:59.466 +07:00 [INF] GetAll Book Action method was invoked
+2024-05-29 20:04:59.473 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/swagger-ui.css - 200 143943 text/css 184.8813ms
+2024-05-29 20:04:59.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 161.3388ms
+2024-05-29 20:04:59.484 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 196.0468ms
+2024-05-29 20:04:59.487 +07:00 [WRN] This is a warning log
+2024-05-29 20:04:59.505 +07:00 [ERR] This is a error log
+2024-05-29 20:04:59.528 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 172.0626ms
+2024-05-29 20:04:59.799 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null

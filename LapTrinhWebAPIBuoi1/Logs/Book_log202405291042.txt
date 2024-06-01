@@ -1,0 +1,128 @@
+2024-05-29 10:42:19.417 +07:00 [INF] User profile is available. Using 'C:\Users\LongTran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-29 10:42:19.762 +07:00 [INF] Now listening on: https://localhost:7144
+2024-05-29 10:42:19.768 +07:00 [INF] Now listening on: http://localhost:5150
+2024-05-29 10:42:19.773 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-29 10:42:19.775 +07:00 [INF] Hosting environment: Development
+2024-05-29 10:42:19.777 +07:00 [INF] Content root path: C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1
+2024-05-29 10:42:22.121 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger - null null
+2024-05-29 10:42:23.211 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2024-05-29 10:42:23.363 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:23.516 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:23.542 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - 500 null text/plain; charset=utf-8 330.1613ms
+2024-05-29 10:42:23.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger - 500 null text/html; charset=utf-8 1497.0161ms
+2024-05-29 10:42:23.666 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-29 10:42:23.666 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-29 10:42:23.966 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 300.7711ms
+2024-05-29 10:42:24.134 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 466.8366ms
+2024-05-29 10:42:24.232 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/favicon.ico - null null
+2024-05-29 10:42:24.366 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:24.377 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/favicon.ico - 500 null text/plain; charset=utf-8 144.5899ms
+2024-05-29 10:42:41.952 +07:00 [INF] User profile is available. Using 'C:\Users\LongTran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-29 10:42:42.123 +07:00 [INF] Now listening on: https://localhost:7144
+2024-05-29 10:42:42.124 +07:00 [INF] Now listening on: http://localhost:5150
+2024-05-29 10:42:42.127 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-29 10:42:42.127 +07:00 [INF] Hosting environment: Development
+2024-05-29 10:42:42.128 +07:00 [INF] Content root path: C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1
+2024-05-29 10:42:42.477 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger - null null
+2024-05-29 10:42:42.723 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:42.792 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger - 500 null text/html; charset=utf-8 316.0188ms
+2024-05-29 10:42:42.873 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2024-05-29 10:42:42.979 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:42.990 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7144/api/Books/get-all-books?%20filterOn=&filterQuery=&sortBy=&isAscending=True - 500 null text/plain; charset=utf-8 117.3339ms
+2024-05-29 10:42:43.017 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-29 10:42:43.017 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2024-05-29 10:42:43.030 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 13.1728ms
+2024-05-29 10:42:43.070 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.2557ms
+2024-05-29 10:42:43.150 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7144/favicon.ico - null null
+2024-05-29 10:42:43.197 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions option) in C:\Users\LongTran\Desktop\Visual Studio 2022\lập trình web\Lập trình web bằng API\LapTrinhWebAPIBuoi1\LapTrinhWebAPIBuoi1\Program.cs:line 29
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-29 10:42:43.262 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7144/favicon.ico - 500 null text/plain; charset=utf-8 111.7329ms
